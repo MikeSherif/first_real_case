@@ -1,0 +1,52 @@
+
+.container{
+
+}
+
+.sculpture__links{
+    width: 183px;
+    height: 300px;
+    background-color: #F0F5FA;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.sculpture__links-list{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding: 39px 0 0 26px;
+    list-style: none;
+}
+
+.sculpture__links-list-item-text{
+    font-family: Inter;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.68px;
+    text-decoration: none;
+}
+
+.sculpture__items-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sculpture__item{
+    border-radius: 20px;
+    width: 923px;
+    height: 214px;
+    list-style: none;
+}
+
+.sculpture__item-active{
+    background-color: #e9f3f9;
+}
+
+.sculpture__item-active-done{
+    background-color: #e9f3f9;
+    opacity: 0.3;
+}
