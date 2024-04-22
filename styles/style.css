@@ -158,11 +158,9 @@
 }
 
 .sculpture__item-common-price{
-    position: absolute;
-    z-index: 1;
-    right: 68px;
-    bottom: 20px;
-
+    text-align: end;
+    margin-top: auto;
+    padding-bottom: 10px;
 }
 .sculpture__item-common-price-text{
     font-family: "Montserrat", sans-serif;
@@ -189,4 +187,8 @@
 
 .hidden{
     display: none;
+}
+
+.pb-185{
+    padding-bottom: 185px;
 }

@@ -190,6 +190,10 @@
                     // При клике на кнопку убираем класс для скрытия текста и скрываем кнопку
                     list.classList.remove('sculpture__item___order-information-list-overflow');
                     this.style.display = 'none';
+                    //Изменяем высоту чтобы она расширялась после показа доп информации
+                    list.style.height = 'auto';
+                    //Добавляем паддинг для соответствия макету
+                    list.classList.add('pb-185');
                 });
             }
         });
