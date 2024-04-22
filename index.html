@@ -56,7 +56,7 @@
                                     </li>
 
                                 </ul>
-                                <button class="sculpture__button">Посмотреть все товары</button>
+                                <button  name="button" class="sculpture__button">Посмотреть все товары</button>
                                 <div class="sculpture__item-common-price">
                                     <p class="sculpture__item-common-price-text">Общая стоимость заказа
                                         <span class="sculpture__item-common-price-count">25 000</span> рублей</p>
@@ -69,7 +69,7 @@
                                 <div class="sculpture__item___status sculpture__item___status-active">В работе</div>
                                 <!--sculpture__item___status-cancelled sculpture__item___status-active sculpture__item___status-done-->
                             </div>
-                            <ul class="sculpture__item___order-information-list">
+                            <ul class="sculpture__item___order-information-list sculpture__item___order-information-list-overflow">
                                 <li class="sculpture__item___order-information-list-item">
                                     <p class="sculpture__item___order-information-list-item-text">
                                         <span class="sculpture__item___order-information-list-item-text-number">1</span>. Серверное оборудование
@@ -88,7 +88,7 @@
                                 </li>
 
                             </ul>
-                            <button class="sculpture__button">Посмотреть все товары</button>
+                            <button name="button" class="sculpture__button">Посмотреть все товары</button>
                             <div class="sculpture__item-common-price">
                                 <p class="sculpture__item-common-price-text">Общая стоимость заказа
                                     <span class="sculpture__item-common-price-count">25 000</span> рублей</p>
@@ -101,7 +101,7 @@
                                 <div class="sculpture__item___status sculpture__item___status-done">Завершен</div>
                                 <!--sculpture__item___status-cancelled sculpture__item___status-active sculpture__item___status-done-->
                             </div>
-                            <ul class="sculpture__item___order-information-list">
+                            <ul class="sculpture__item___order-information-list " id="lol">
                                 <li class="sculpture__item___order-information-list-item">
                                     <p class="sculpture__item___order-information-list-item-text">
                                         <span class="sculpture__item___order-information-list-item-text-number">1</span>. Серверное оборудование
@@ -118,9 +118,33 @@
                                         <span class="sculpture__item___order-information-list-item-text-price">2900</span> руб
                                     </p>
                                 </li>
+                                <li class="sculpture__item___order-information-list-item">
+                                    <p class="sculpture__item___order-information-list-item-text">
+                                        <span class="sculpture__item___order-information-list-item-text-number">2</span>. Любое другое оборудование с длинным названием в две строчки
+                                    </p>
+                                    <p class="sculpture__item___order-information-list-item-text">
+                                        <span class="sculpture__item___order-information-list-item-text-price">2900</span> руб
+                                    </p>
+                                </li>
+                                <li class="sculpture__item___order-information-list-item">
+                                    <p class="sculpture__item___order-information-list-item-text">
+                                        <span class="sculpture__item___order-information-list-item-text-number">2</span>. Любое другое оборудование с длинным названием в две строчки
+                                    </p>
+                                    <p class="sculpture__item___order-information-list-item-text">
+                                        <span class="sculpture__item___order-information-list-item-text-price">2900</span> руб
+                                    </p>
+                                </li>
+                                <li class="sculpture__item___order-information-list-item">
+                                    <p class="sculpture__item___order-information-list-item-text">
+                                        <span class="sculpture__item___order-information-list-item-text-number">2</span>. Любое другое оборудование с длинным названием в две строчки
+                                    </p>
+                                    <p class="sculpture__item___order-information-list-item-text">
+                                        <span class="sculpture__item___order-information-list-item-text-price">2900</span> руб
+                                    </p>
+                                </li>
 
                             </ul>
-                            <button class="sculpture__button">Посмотреть все товары</button>
+                            <button name="button" class="sculpture__button">Посмотреть все товары</button>
                             <div class="sculpture__item-common-price">
                                 <p class="sculpture__item-common-price-text">Общая стоимость заказа
                                     <span class="sculpture__item-common-price-count">25 000</span> рублей</p>
@@ -130,11 +154,50 @@
                     </ul>
                 </article>
 
-                <aside class="sculpture__attention">
 
-                </aside>
             </div>
+            <aside class="sculpture__attention">
+
+            </aside>
         </section>
     </main>
+    <div id="empty"></div>
+    <script>
+
+        // Получаем все списки
+        let lists = document.querySelectorAll('.sculpture__item___order-information-list');
+
+        // Проходим по каждому списку
+        lists.forEach((list) => {
+            // Получаем все элементы списка
+            let listItems = list.querySelectorAll('.sculpture__item___order-information-list-item');
+
+            // Получаем кнопку, которая находится под списком
+            let button = list.nextElementSibling;
+            if (button && button.classList.contains('sculpture__button')) {
+                // Если количество элементов списка больше 2, то добавляем класс для скрытия текста и показываем кнопку
+                if (listItems.length > 2) {
+                    list.classList.add('sculpture__item___order-information-list-overflow');
+                    button.style.display = 'block';
+                } else {
+                    // Иначе убираем класс для скрытия текста и скрываем кнопку
+                    list.classList.remove('sculpture__item___order-information-list-overflow');
+                    button.style.display = 'none';
+                }
+
+                // Добавляем обработчик события на кнопку
+                button.addEventListener('click', function() {
+                    // При клике на кнопку убираем класс для скрытия текста и скрываем кнопку
+                    list.classList.remove('sculpture__item___order-information-list-overflow');
+                    this.style.display = 'none';
+                });
+            }
+        });
+
+
+
+
+
+    </script>
 </body>
 </html>

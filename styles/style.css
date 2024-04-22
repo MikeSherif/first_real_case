@@ -4,10 +4,16 @@
     margin: auto;
 }
 
+.sculpture{
+    position: relative;
+    z-index: 0;
+}
+
 .sculpture_orientation{
     display: flex;
     flex-direction: row;
     gap: 70px;
+    padding-top: 25px;
 }
 
 .sculpture__links{
@@ -46,7 +52,7 @@
 .sculpture__item{
     box-sizing: border-box;
     width: 923px;
-    height: 214px;
+    min-height: 214px;
     position: relative;
     z-index: 0;
     border-radius: 20px;
@@ -108,11 +114,16 @@
 }
 
 .sculpture__item___order-information-list{
+    height: 67.815px;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 29px 0 0 0;
+}
+
+.sculpture__item___order-information-list-overflow{
+    overflow-y: hidden;
 }
 
 .sculpture__item___order-information-list-item{
@@ -159,4 +170,23 @@
     font-size: 15px;
     color: #000;
     margin: 0;
+}
+
+.sculpture__attention{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 26px;
+    height: 805px;
+    width: 286px;
+    background-color: #C8C111;
+}
+
+#empty{
+    display: none;
+    height: 68px;
+}
+
+.hidden{
+    display: none;
 }
