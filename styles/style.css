@@ -41,9 +41,14 @@
     text-decoration: none;
 }
 
+.sculpture__items{
+    min-height: 780px;
+}
+
 .sculpture__items-list{
     display: flex;
     flex-direction: column;
+    height: 100%;
     gap: 24px;
     padding: 0;
     margin: 0;
@@ -68,6 +73,7 @@
 }
 
 .sculpture__item-active-done{
+    margin-top: auto;
     background-color: #e9f3f9;
     opacity: 0.3;
 }
@@ -111,6 +117,7 @@
 
 .sculpture__item___status-done{
     background-color: #79c142;
+    justify-self: flex-end;
 }
 
 .sculpture__item___order-information-list{
@@ -160,7 +167,7 @@
 .sculpture__item-common-price{
     text-align: end;
     margin-top: auto;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .sculpture__item-common-price-text{
     font-family: "Montserrat", sans-serif;
@@ -168,6 +175,14 @@
     font-size: 15px;
     color: #000;
     margin: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.pb-185{
+    padding-bottom: 185px;
 }
 
 .sculpture__attention{
@@ -178,17 +193,4 @@
     height: 805px;
     width: 286px;
     background-color: #C8C111;
-}
-
-#empty{
-    display: none;
-    height: 68px;
-}
-
-.hidden{
-    display: none;
-}
-
-.pb-185{
-    padding-bottom: 185px;
 }
